@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shows information on who is in-game on TSC, what team they're on, and more">
+  <meta charset="UTF-8">
+  <!-- Start OpenGraph -->
+  <meta property="og:title" content="TSC Main Server Data" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="GOOGLE_URL_GOES_HERE" />
+  <meta property="og:description"
+    content="Shows information on who is in-game on TSC, what team they're on, and more" />
+  <meta property="og:site_name" content="Made by TaviShadows" />
+  <meta property="og:locale" content="en-UK" />
+  <meta property="og:locale:alternate" content="en-US" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="rgba(255, 153, 51, 0.98)">
+  <!-- End OpenGraph -->
+  <title>TSC Main Server Data</title>
+  <link rel="canonical" href="GOOGLE_URL_GOES_HERE">
+  <!-- Start other tags -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="top" class="bg-black text-white w-full h-screen p-2" hidden>
+  <div id="templates" hidden>
+    <div data-template-id="team" class="border-2 rounded-lg p-2 pb-4">
+      <a class="sticky top-0" href="">
+        <div class="rounded-lg">
+          <p class="text-center text-xl font-bold">TEAM NAME</p>
+        </div>
+      </a>
+      <ul class="pl-4 mt-2 text-sm">
+        <li><i><a href="#top">Go to top</a></i></li>
+      </ul>
+    </div>
+  </div>
+  <div id="information" class="bg-blue-800 w-[75%] self-start justify-self-center rounded-lg p-2">
+    <div>
+      <!-- Team list -->
+      <p class="text-xl font-bold open-sans">Team List</p>
+      <ul>
+        <li>Loading servers...</li>
+      </ul>
+      <br>
+      <p class="text-sm"><i>Auto reloads: Data updated every 2 minutes</i></p>
+      <button id="loader" class="bg-black text-white p-1 rounded-lg">Load main server data!</button>
+    </div>
+    <div hidden>
+      <!-- User descriptor -->
+      <button id="info-back" class="text-sm p-1 rounded-lg"><i>Back to teams</i></button>
+      <p class="text-xl font-bold open-sans">USERNAME_HERE</p>
+      <p>User Information</p>
+      <ul id="user-infolist">
+        <li>User ID</li>
+        <li>Display Name</li>
+        <li>"True" Name</li>
+        <li>Team Name</li>
+        <li>Rank Name</li>
+      </ul>
+      <br>
+      <p>Currency Information</p>
+      <ul id="user-currency">
+        <li>Networth</li>
+        <li>Cash</li>
+      </ul>
+    </div>
+  </div>
+  <div id="team-holder" class="flex flex-col gap-2">
+    <!-- Team holder -->
+  </div>
+  <script src="./script.js" defer="true"></script>
+</body>
+
+</html>
