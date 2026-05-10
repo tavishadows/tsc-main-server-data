@@ -156,7 +156,7 @@ function renderTeams() {
     const teamNamePtr = document.createElement("li");
     const ref = document.createElement("a");
     ref.href = "#" + normalize(teamName);
-    ref.innerText = teamName;
+    ref.innerText = `${teamName} (${players.length})`;
     teamNamePtr.appendChild(ref);
     information.querySelector("ul").appendChild(teamNamePtr);
 
