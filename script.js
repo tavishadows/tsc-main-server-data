@@ -162,8 +162,8 @@ function renderTeams() {
 
     for (const player of players) {
       const entry = document.createElement("li");
-      // We <3 the CIS
-      if (String(player.Nametag.TrueName).includes("CIS ")) {
+      // We <3 the larpers
+      if (player.Nametag.TrueName !== player.Nametag.Username) {
         entry.innerText = player.Nametag.TrueName;
       } else {
         entry.innerText = `${player.Nametag.DisplayName} (${player.Nametag.TrueName})`;
