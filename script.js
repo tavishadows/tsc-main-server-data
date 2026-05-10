@@ -1,3 +1,7 @@
+// OooOoOOoo scary hardcoded URL
+// In reality, this connects to the Roblox servers without leaking
+// my Open Cloud or ROBLOSECURITY cookies. It works fine for your
+// purposes.
 const defaultUrl =
   "https://script.google.com/macros/s/AKfycbxx32LCl41PZrZRMzv67jNt-C707Dqz9B541Xz4fkpnGpFhIkhZt5a_zOfYKOmjCoS4/exec";
 window.placeId = 7131355525;
@@ -11,8 +15,8 @@ function normalize(str) {
   return str.replaceAll(/[^A-Za-z]/g, "");
 }
 
+// Calculate the text colour by using WGC standards
 function calculateBW(hex) {
-  // Calculate the team name text colour by using WGC standards
   const rgb = hex.match(/.{2}/g).map((c) => parseInt(c, 16));
   const channelLums = rgb.map((c) => {
     let s = c / 255;
@@ -67,10 +71,6 @@ function describePlayer(playerData) {
 
   const teamName = document.createElement("li");
   teamName.innerText = `Team: ${playerData.Team.Name}`;
-  // teamName.style.backgroundColor = `#${playerData.Team.Color}`;
-  // teamName.style.color = calculateBW(playerData.Team.Color);
-  // teamName.style.padding = '4px';
-  // teamName.style.borderRadius = '4px';
   infolist.appendChild(teamName);
 
   if (playerData.Nametag.RankName) {
